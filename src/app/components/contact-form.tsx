@@ -7,11 +7,10 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
 import { Rocket } from "lucide-react"
+import { toast } from "sonner"
 
 export default function ContactForm() {
-  const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
@@ -34,8 +33,7 @@ export default function ContactForm() {
       // Aqui você implementaria a lógica real de envio
       await new Promise((resolve) => setTimeout(resolve, 1500))
 
-      toast({
-        title: "Mensagem enviada com sucesso!",
+      toast.success("Mensagem enviada com sucesso!", {
         description: "Sua mensagem foi lançada ao espaço. Responderei em breve.",
       })
 
@@ -47,10 +45,8 @@ export default function ContactForm() {
         message: "",
       })
     } catch (error) {
-      toast({
-        title: "Falha no lançamento da mensagem",
+      toast.error("Falha no lançamento da mensagem", {
         description: "Houve um problema. Por favor, tente novamente mais tarde.",
-        variant: "destructive",
       })
     } finally {
       setIsSubmitting(false)
@@ -129,3 +125,6 @@ export default function ContactForm() {
     </form>
   )
 }
+
+
+
