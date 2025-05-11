@@ -186,7 +186,7 @@ export default function Home() {
             />
           </div>
           <div className="text-center mt-12">
-            <Link href="/projetos">
+            <Link href="/projects">
               <Button size="lg" variant="outline" className="border-blue-800 text-blue-300 hover:bg-blue-900/50">
                 Explorar Todos os Projetos <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
