@@ -52,8 +52,6 @@ export default function TechStack() {
     { name: "CI/CD", icon: "🔄", category: "tools", level: 3 },
   ]
 
-  const filteredTechs = technologies.filter((tech) => tech.category === activeCategory)
-
   return (
     <div className="space-y-8">
       <Tabs

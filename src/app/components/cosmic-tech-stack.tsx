@@ -16,7 +16,7 @@ interface Tech {
 }
 
 export default function CosmicTechStack() {
-  const [activeCategory, setActiveCategory] = useState<TechCategory>("frontend")
+  const [_activeCategory, setActiveCategory] = useState<TechCategory>("frontend")
 
   const technologies: Tech[] = [
     // Frontend
@@ -131,3 +131,4 @@ export default function CosmicTechStack() {
     </div>
   )
 }
+

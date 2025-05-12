@@ -44,7 +44,7 @@ export default function ContactForm() {
         subject: "",
         message: "",
       })
-    } catch (error) {
+    } catch (_) {
       toast.error("Falha no lançamento da mensagem", {
         description: "Houve um problema. Por favor, tente novamente mais tarde.",
       })
